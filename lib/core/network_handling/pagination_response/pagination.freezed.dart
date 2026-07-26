@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Pagination {
 
- int? get total;@JsonKey(name: 'per_page') int? get perPage; int? get current; int? get first; int? get last; int? get previous; int? get next; int? get from; int? get to;
+ int? get total; int? get perPage; int? get current; int? get first; int? get last; int? get previous; int? get next; int? get from; int? get to;
 /// Create a copy of Pagination
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $PaginationCopyWith<$Res>  {
   factory $PaginationCopyWith(Pagination value, $Res Function(Pagination) _then) = _$PaginationCopyWithImpl;
 @useResult
 $Res call({
- int? total,@JsonKey(name: 'per_page') int? perPage, int? current, int? first, int? last, int? previous, int? next, int? from, int? to
+ int? total, int? perPage, int? current, int? first, int? last, int? previous, int? next, int? from, int? to
 });
 
 
@@ -161,7 +161,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? total, @JsonKey(name: 'per_page')  int? perPage,  int? current,  int? first,  int? last,  int? previous,  int? next,  int? from,  int? to)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? total,  int? perPage,  int? current,  int? first,  int? last,  int? previous,  int? next,  int? from,  int? to)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Pagination() when $default != null:
 return $default(_that.total,_that.perPage,_that.current,_that.first,_that.last,_that.previous,_that.next,_that.from,_that.to);case _:
@@ -182,7 +182,7 @@ return $default(_that.total,_that.perPage,_that.current,_that.first,_that.last,_
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? total, @JsonKey(name: 'per_page')  int? perPage,  int? current,  int? first,  int? last,  int? previous,  int? next,  int? from,  int? to)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? total,  int? perPage,  int? current,  int? first,  int? last,  int? previous,  int? next,  int? from,  int? to)  $default,) {final _that = this;
 switch (_that) {
 case _Pagination():
 return $default(_that.total,_that.perPage,_that.current,_that.first,_that.last,_that.previous,_that.next,_that.from,_that.to);case _:
@@ -202,7 +202,7 @@ return $default(_that.total,_that.perPage,_that.current,_that.first,_that.last,_
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? total, @JsonKey(name: 'per_page')  int? perPage,  int? current,  int? first,  int? last,  int? previous,  int? next,  int? from,  int? to)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? total,  int? perPage,  int? current,  int? first,  int? last,  int? previous,  int? next,  int? from,  int? to)?  $default,) {final _that = this;
 switch (_that) {
 case _Pagination() when $default != null:
 return $default(_that.total,_that.perPage,_that.current,_that.first,_that.last,_that.previous,_that.next,_that.from,_that.to);case _:
@@ -214,14 +214,14 @@ return $default(_that.total,_that.perPage,_that.current,_that.first,_that.last,_
 }
 
 /// @nodoc
+@JsonSerializable()
 
-@JsonSerializable(fieldRename: FieldRename.snake, checked: true)
 class _Pagination implements Pagination {
-  const _Pagination({this.total, @JsonKey(name: 'per_page') this.perPage, this.current, this.first, this.last, this.previous, this.next, this.from, this.to});
+  const _Pagination({this.total, this.perPage, this.current, this.first, this.last, this.previous, this.next, this.from, this.to});
   factory _Pagination.fromJson(Map<String, dynamic> json) => _$PaginationFromJson(json);
 
 @override final  int? total;
-@override@JsonKey(name: 'per_page') final  int? perPage;
+@override final  int? perPage;
 @override final  int? current;
 @override final  int? first;
 @override final  int? last;
@@ -263,7 +263,7 @@ abstract mixin class _$PaginationCopyWith<$Res> implements $PaginationCopyWith<$
   factory _$PaginationCopyWith(_Pagination value, $Res Function(_Pagination) _then) = __$PaginationCopyWithImpl;
 @override @useResult
 $Res call({
- int? total,@JsonKey(name: 'per_page') int? perPage, int? current, int? first, int? last, int? previous, int? next, int? from, int? to
+ int? total, int? perPage, int? current, int? first, int? last, int? previous, int? next, int? from, int? to
 });
 
 

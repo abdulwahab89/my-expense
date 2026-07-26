@@ -209,8 +209,8 @@ return $default(_that.success,_that.status,_that.message,_that.data);case _:
 }
 
 /// @nodoc
+@JsonSerializable()
 
-@JsonSerializable(fieldRename: FieldRename.snake, checked: true)
 class _BaseResponse<T> implements BaseResponse<T> {
   const _BaseResponse({required this.success, required this.status, required final  List<String> message, required this.data}): _message = message;
   factory _BaseResponse.fromJson(Map<String, dynamic> json) => _$BaseResponseFromJson(json);

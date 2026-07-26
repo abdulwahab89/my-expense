@@ -4,8 +4,7 @@ part 'base_request.freezed.dart';
 part 'base_request.g.dart';
 
 @freezed
-class BaseRequest with _$BaseRequest {
-  @JsonSerializable(fieldRename: FieldRename.snake, checked: true)
+abstract class BaseRequest with _$BaseRequest {
   const factory BaseRequest({
     @Default(1) int paginate,
     @Default(1) int page,
@@ -19,44 +18,6 @@ class BaseRequest with _$BaseRequest {
 
   factory BaseRequest.fromJson(Map<String, dynamic> json) =>
       _$BaseRequestFromJson(json);
-
-  @override
-  // TODO: implement filterBy
-  String? get filterBy => throw UnimplementedError();
-
-  @override
-  // TODO: implement filterValue
-  get filterValue => throw UnimplementedError();
-
-  @override
-  // TODO: implement id
-  int? get id => throw UnimplementedError();
-
-  @override
-  // TODO: implement page
-  int get page => throw UnimplementedError();
-
-  @override
-  // TODO: implement paginate
-  int get paginate => throw UnimplementedError();
-
-  @override
-  // TODO: implement perPage
-  int get perPage => throw UnimplementedError();
-
-  @override
-  // TODO: implement query
-  String? get query => throw UnimplementedError();
-
-  @override
-  // TODO: implement searchByDefinition
-  bool? get searchByDefinition => throw UnimplementedError();
-
-  @override
-  Map<String, dynamic> toJson() {
-    // TODO: implement toJson
-    throw UnimplementedError();
-  }
 }
 
 extension BaseRequestExtension on BaseRequest {

@@ -219,8 +219,8 @@ return $default(_that.data,_that.pagination);case _:
 }
 
 /// @nodoc
+@JsonSerializable()
 
-@JsonSerializable(fieldRename: FieldRename.snake, checked: true)
 class _SubBaseResponse implements SubBaseResponse {
   const _SubBaseResponse({required this.data, required this.pagination});
   factory _SubBaseResponse.fromJson(Map<String, dynamic> json) => _$SubBaseResponseFromJson(json);

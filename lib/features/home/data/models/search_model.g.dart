@@ -6,12 +6,16 @@ part of 'search_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_SearchModel _$SearchModelFromJson(Map<String, dynamic> json) => _SearchModel(
-  id: (json['id'] as num).toInt(),
-  title: json['title'] as String,
-  type: json['type'] as String,
-  definition: json['definition'] as String?,
-);
+_SearchModel _$SearchModelFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('_SearchModel', json, ($checkedConvert) {
+      final val = _SearchModel(
+        id: $checkedConvert('id', (v) => (v as num).toInt()),
+        title: $checkedConvert('title', (v) => v as String),
+        type: $checkedConvert('type', (v) => v as String),
+        definition: $checkedConvert('definition', (v) => v as String?),
+      );
+      return val;
+    });
 
 Map<String, dynamic> _$SearchModelToJson(_SearchModel instance) =>
     <String, dynamic>{

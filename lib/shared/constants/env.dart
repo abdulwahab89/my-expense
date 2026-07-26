@@ -33,4 +33,16 @@ abstract class Env {
     obfuscate: true,
   )
   static String secretAccessKey = _Env.secretAccessKey;
+
+  @EnviedField(
+    varName: 'SUPABASE_URL',
+    obfuscate: true,
+  )
+  static String supabaseUrl = _Env.supabaseUrl;
+
+  @EnviedField(
+    varName: 'SUPABASE_ANON_KEY',
+    obfuscate: true,
+  )
+  static String supabaseAnonKey = _Env.supabaseAnonKey;
 }

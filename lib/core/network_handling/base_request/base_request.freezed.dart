@@ -213,8 +213,8 @@ return $default(_that.paginate,_that.page,_that.perPage,_that.id,_that.filterBy,
 }
 
 /// @nodoc
+@JsonSerializable()
 
-@JsonSerializable(fieldRename: FieldRename.snake, checked: true)
 class _BaseRequest implements BaseRequest {
   const _BaseRequest({this.paginate = 1, this.page = 1, this.perPage = 20, this.id = 0, this.filterBy, this.filterValue, this.query, this.searchByDefinition});
   factory _BaseRequest.fromJson(Map<String, dynamic> json) => _$BaseRequestFromJson(json);

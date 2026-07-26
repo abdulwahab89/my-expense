@@ -6,19 +6,10 @@ import '../../data/models/search_model.dart';
 part 'home_state.freezed.dart';
 
 @freezed
-class HomeState with _$HomeState {
+abstract class HomeState with _$HomeState {
   const factory HomeState({
     required AsyncValue<List<SearchModel>> searchResponse,
     required bool searchByDefinition,
     // required Pagination? pagination,
   }) = _HomeState;
-
-  @override
-  // TODO: implement searchByDefinition
-  bool get searchByDefinition => throw UnimplementedError();
-
-  @override
-  // TODO: implement searchResponse
-  AsyncValue<List<SearchModel>> get searchResponse =>
-      throw UnimplementedError();
 }

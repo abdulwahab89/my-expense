@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'core/app_navigation/go_router.dart';
 import 'shared/constants/api_routes.dart';
@@ -14,6 +15,12 @@ import 'shared/theme/app_theme.dart';
 void main() async {
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  
+  await Supabase.initialize(
+    url: Env.supabaseUrl,
+    anonKey: Env.supabaseAnonKey,
+  );
+
   setPathUrlStrategy();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   // Hive.registerAdapters();
